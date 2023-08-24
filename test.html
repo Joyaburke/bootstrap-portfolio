@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <title>Bootstrap Thumbnail Carousel</title> -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> 
+
+<style>
+body {
+	background: #ebebeb;
+}
+h2 {
+	color: #696969;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	position: relative;
+	margin: 40px 70px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+h2::after {
+	content: "";
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    height: 1px;
+    border-radius: 1px;
+    background: #d4d4d4;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+}
+h2 span {
+	display: inline-block;
+	padding: 0 25px;
+	background:#ebebeb;
+	position:relative;
+	z-index:2;
+}
+
+h4 {
+    font-family: 'Poiret One', cursive;
+    font-size: 16pxx
+}
+
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {	
+	margin: 30px auto 50px;
+	padding: 0 68px;
+}
+.carousel .item {
+    text-align: center;
+	overflow: hidden;
+    height: 300px;
+}
+/* .carousel .item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+} */
+.carousel .item img {
+    margin: 0 auto;
+    
+}
+.carousel .carousel-control {
+	width: 68px;
+	background: none;
+}
+.carousel .carousel-control i {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin-top: -15px;
+    z-index: 5;
+    left: 0;
+    right: 0;
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+}
+.carousel-indicators li.active {
+	background: #555;
+}
+
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9 col-center">
+			<h2><span>Current <b>Books</b></span></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><a href=#survive><img src="img/books/SurvivingChristmas.png" class="img-responsive" alt="Surviving Christmas Cover"><h4>Surviving Christmas</h4></a></div></div>
+							<div class="col-sm-4"><div class="img-box"><a href="https://tinyurl.com/45w7ymdk"><img src="img/books/Nora.png" class="img-responsive" alt="Nora witch in training"><h4>Nora witch in training</h4></a></div></div>
+							<div class="col-sm-4"><div class="img-box"><a href="https://tinyurl.com/57dnf9ez"><img src="img/books/mouse.png" class="img-responsive" alt=""><h4>Mouse Goes On An Adventure</h4></a></div></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/4.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/5.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/6.jpg" class="img-responsive" alt=""></div></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/7.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/8.jpg" class="img-responsive" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="/examples/images/thumbs/9.jpg" class="img-responsive" alt=""></div></div>
+						</div>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<h3>Books!</h3>
+<ul class="nav nav-tabs">
+    <li class="nav-item"><a class="nav-link active" href="#survive" role="tab" data-toggle="tab">Surviving Christmas</a></li>
+    <li class="nav-item"><a class="nav-link" href="#nora" role="tab" data-toggle="tab">Nora witch in training</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="#mouse" role="tab" data-toggle="tab">Mouse Goes on an Adventure</a></li>
+    <li class="nav-item"><a class="nav-link" href="#mandala" role="tab" data-toggle="tab">Mandalas for Kids</a></li>
+    <li class="nav-item"><a class="nav-link" href="#activity" role="tab" data-toggle="tab">Halloween Activity Book</a></li>
+    <li class="nav-item"><a class="nav-link" href="#agent" role="tab" data-toggle="tab">Secret Agent Files</a></li>
+    <li class="nav-item"><a class="nav-link" href="#oj" role="tab" data-toggle="tab">Eggs, Toast, and Orange Juice</a></li>
+    <li class="nav-item"><a class="nav-link" href="#comics" role="tab" data-toggle="tab">Create Your Own Comics</a></li> -->
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade show active" id="survive">
+        <h4>Surviving Christmas<small> A Keegan Reese Mystery</small></h4>
+        <p class="d-none d-sm-block col-md-6">Left with an aunt he barely knows, Keegan Rees is dreading an awkward Christmas. But, for all her chipperness and battleship playing, 
+			Keegan notices there’s something suspicious about his aunt. Cryptic phone calls, mysterious meetings in the mall, long absences. As time goes by, he stumbles upon more and more 
+			clues his aunt isn’t the crazy lady he always thought she was. In fact, he trips head first into her secret life and discovers it’ll take the two of them if they want to make 
+			it until Christmas. 			Find out the shocking discovery Keegan makes about his aunt right here!</p>
+		<img src="img/books/SurvivingChristmas.png" height="340" width="300"/>
+    </div>
+    <div role="tabpanel" class="tab-pane fade show" id="nora">
+        <h2>Nora<small> witch in training</small></h2>
+        <p class="d-none d-sm-block">Learning to be a witch...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="mouse">
+        <h4>Mouse Goes On An Adventure<small></small></h4>
+        <p class="d-none d-sm-block">Mouse just wants to find flowers...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="mandala">
+        <h4>Mandalas<small> for kids</small></h4>
+        <p class="d-none d-sm-block">Enjoy coloring...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="activity">
+        <h4>Halloween Activity Book<small> Ages 4-8</small></h4>
+        <p class="d-none d-sm-block">Who doesn't love to...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="agent">
+        <h4>Secret Agent Files<small> The case of the missing shrubs</small></h4>
+        <p class="d-none d-sm-block">Violet has a nose for trouble...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="oj">
+        <h4>Eggs, Toast, and Orange Juice<small> A writer's pocket companion</small></h4>
+        <p class="d-none d-sm-block">Being a writer is...</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="comics">
+        <h4>Create Your Own Comics<small> Vols 1 & 2</small></h4>
+        <p class="d-none d-sm-block">Ever dream of creating your own comics?</p>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class = "row row-content" style="align-items: center;">
+        <div class = "col-md-9">
+			<h4><strong>Surviving Christmas</strong><small> A Keegan Reese Mystery</small></h4>
+                    <p class="d-none d-sm-block col-md-9">Left with an aunt he barely knows, Keegan Rees is dreading an awkward Christmas. But, for all her chipperness and battleship playing, 
+                        Keegan notices there’s something suspicious about his aunt. Cryptic phone calls, mysterious meetings in the mall, long absences. As time goes by, he stumbles upon more and more 
+                        clues his aunt isn’t the crazy lady he always thought she was. In fact, he trips head first into her secret life and discovers it’ll take the two of them if they want to make 
+                        it until Christmas. 			Find out the shocking discovery Keegan makes about his aunt right here!</p>
+                    <img src="img/books/SurvivingChristmas.png" height="340" width="300"/>
+                    <a href="https://tinyurl.com/4vtbja4f" target="_blank"><button class="buy_btn shadow"><strong>Get on Amazon.com</strong></button></a>		
+        </div> 
+		
+        <div class = "col-md-3"> 
+			<h4><strong>Free Printables</strong><small>  </small></h4>
+			<p class="d-none d-sm-block col-md-9">
+				<hr><a href="" target="_blank"><button class="buy_btn shadow"><strong>Coloring Page</strong></button></a>
+				<hr><a href="" target="_blank"><button class="buy_btn shadow"><strong>Activity Sheet</strong></button></a>
+				<hr><a href="" target="_blank"><button class="buy_btn shadow"><strong>PNW Pirate Facts</strong></button></a>
+			</p>      
+		</div>
+	</div>
+</div>
+
+<br>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>                                		
